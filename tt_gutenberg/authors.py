@@ -2,10 +2,13 @@ import pandas as pd
 from .textutil import read_csv_d
 
 def list_authors(by_languages, alias):
+    """
+    This function takes boolen input and returns alias list w.r.t. tranaslation count, otherwise just returns the authors list.
+    """
     
     df_a,df_l = read_csv_d()
-
-    #print(df_l['total_languages'].nunique)
+    
+    # merges two datasets
     merged_df = merged_df = pd.merge(
         df_a,
         df_l,
